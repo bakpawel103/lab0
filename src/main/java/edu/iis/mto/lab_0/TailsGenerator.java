@@ -6,7 +6,17 @@ import java.util.List;
 public class TailsGenerator {
 
     public List<String> tails(String value) {
-        return new ArrayList<>(value.length());
+        List<String> tails = new ArrayList<>(value.length()+1);
+
+        for(int valueIndex = 0; valueIndex <= value.length(); valueIndex++) {
+            tails.add(value.substring(valueIndex));
+        }
+
+        return tails;
     }
 
+    public static void main(String[] args) {
+        TailsGenerator tailsGenerator = new TailsGenerator();
+        List<String> tailsList = tailsGenerator.tails("HELLO");
+    }
 }
