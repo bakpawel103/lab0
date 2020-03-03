@@ -14,9 +14,4 @@ public class TailsGenerator {
 
         return tails;
     }
-
-    public static void main(String[] args) {
-        TailsGenerator tailsGenerator = new TailsGenerator();
-        List<String> tailsList = tailsGenerator.tails("HELLO");
-    }
 }
